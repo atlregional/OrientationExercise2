@@ -1,0 +1,28 @@
+{
+  "mapcontainer" : {
+    "center" : [33, -84],
+    "zoom" : 7.5
+  },
+  "tilelayer" : {
+    "url" : "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    "attribution" : "&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors"
+  },
+  "geos" : [
+    {
+      "name" : "Cities",
+      "url" : "https://opendata.arcgis.com/datasets/34520575dfc34b8cac783caff702b8cc_58.geojson"
+    },
+    {
+      "name" : "Counties",
+      "url" : "https://opendata.arcgis.com/datasets/dc20713282734a73abe990995de40497_68.geojson"
+    },
+    {
+      "name" : "House Districts",
+      "url" : "https://opendata.arcgis.com/datasets/31d88d3b23a54585adf836cf6a9687eb_127.geojson"
+    },
+    {
+      "name" : "Regional Commissions",
+      "url" : "https://opendata.arcgis.com/datasets/a1b74290acf241bf96f112a29a8f7166_103.geojson"
+    }
+  ]
+}
