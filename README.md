@@ -1,8 +1,8 @@
 #### Neighborhood Nexus: Assistant Full Stack Developer Orientation
-## Exercise 2: Map Makinhg
+## Exercise 2: Map Making
 
 ### Description
-The purpose of this exercise is to demonstrate simple map making using [React-Leaflet.js](https://react-leaflet.js.org/)  and the ability to use the React Hooks ```useState()``` and ```useEffect()``` to dynamically render GeoJSON returned via API.  The final result should be a working single page application which allows the user to select a map geography to be dislpayed on full page map.
+The purpose of this exercise is to demonstrate simple map making using [React-Leaflet.js](https://react-leaflet.js.org/) including the ability to use the React Hooks ```useState()``` and ```useEffect()``` to dynamically render GeoJSON returned via API.  The final result should be a working single page application which allows the user to select/change geographic boundaries dislpayed on a map.
 
 ### Getting Started
 1. Clone repo to your a local directory.
@@ -22,6 +22,6 @@ The purpose of this exercise is to demonstrate simple map making using [React-Le
      * Import and use ```<Dropdown selection/>``` component from ```semantic-ui-react``` npm package.
      * Get options params from imported ```config``` object and create option array to pass to options in ```<Dropdown />```
      * Selecting a geography should ```setSelectedGeo``` to be used to ```getGeoJSON```.
-     *  ```getGeoJSON``` should use ```url``` value passed from ```selectedGeo``` to run API call and ```setGeoJSON``` using ```data``` proporty in response which should in turn add/change ```<GeoJSON />``` component to the map
+     *  ```getGeoJSON``` should use ```url``` value passed from ```selectedGeo``` to run API call and ```setGeoJSON``` using ```data``` proporty in response which should in turn add/change ```<GeoJSON />``` component to the map.
 
 
