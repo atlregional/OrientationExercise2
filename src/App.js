@@ -19,30 +19,15 @@ const App = () => {
   const [ geoJSON, setGeoJSON ] = useState();
 
   // Function which returns an array of geography options
-  // to be passed to DropDown component
+  // to be passed to Geography Selector Dropdown component
   const geoOptions = () => {
-    const options = config.geos.map(geo => (
-      {
-        text: geo.name,
-        value: geo.url,
-        key: `geo-option-${geo.name.split(' ').join('-')}`
-      }
-    ));
-    console.log(options)
-    // get geos from config object to populate options array
+    const options = []
+    // Use geos property in config object to populate options array
     return options; 
   };
 
-  // Get GeoJSON
-  const getGeoJSON = () => selectedGeo
-  ? axios.get(selectedGeo.value)
-    .then(res => {
-      console.log(selectedGeo);
-
-      setGeoJSON(res.data)
-    })
-    .catch(err => console.log(err))
-  : null;
+  // Get GeoJSON via API if/when selectedGeo has been set
+  const getGeoJSON = () => {}
 
   useEffect(getGeoJSON, [selectedGeo]);
 
@@ -66,28 +51,12 @@ const App = () => {
       </div>
       <div className='map-container'>
         {
-          // Map
+          // MapContainer with nested TileLayer and GeoJSON components
         }
-        <MapContainer
-          center={config.mapcontainer.center} 
-          zoom={config.mapcontainer.zoom} 
-        >
-          <TileLayer
-            url={config.tilelayer.url}
-            attribution={config.tilelayer.attribution}
-          />
-          {
-            geoJSON
-            ?  <GeoJSON
-                key={`layer-${selectedGeo.value}`} 
-                data={geoJSON}
-              />
-            : null
-
-          }
-
-        </MapContainer>
         {
+          // Loader spinner will render if geography has been selected
+          // but geoJSON has yet to be returned from API call
+
           selectedGeo && 
           !geoJSON
           ? <div id='loader'>
